@@ -7,3 +7,6 @@ setopt hist_ignore_all_dups   # Ignores duplicate entries in history
 
 ################### Navigation ###################
 setopt autocd   # Cd juste by typing directory name
+
+################### Environment ###################
+export GIT_EDITOR='vim'   # Uses vim as git commit editor

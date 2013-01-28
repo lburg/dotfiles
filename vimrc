@@ -58,7 +58,7 @@ set undofile
 set autoindent      " Automatically indents on newline based on previous one
 set smartindent     " Indent automatically inside blocks
 set smarttab        " Use shiftwidth for the beginning of a line, (soft)tabstop otherwise
-set shiftwidth=2    " Space to insert at beginning of line
+set shiftwidth=4    " Space to insert at beginning of line
 set tabstop=2       " Space to insert..
 set softtabstop=2   " ..anywhere else
 set expandtab       " Use a number of space for tabs

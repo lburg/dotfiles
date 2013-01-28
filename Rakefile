@@ -27,7 +27,7 @@ task :install do
   end
 
   puts "Installing everything else..."
-  files = Dir["*"] - %w"Rakefile zsh"
+  files = Dir["*"] - %w"Rakefile zsh README.md"
   # Symlinks everything else
   files.each do |dotfile|
     FileUtils.ln_s("#{Dir.pwd}/#{dotfile}", "#{ENV['HOME']}/.#{dotfile}")

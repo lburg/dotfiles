@@ -1,0 +1,13 @@
+# Vim files
+*.swp
+*.swo
+
+# Emacs files
+*~
+#*#
+
+# C/C++ files
+*.o
+*.a
+*.so
+*.out

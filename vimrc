@@ -67,8 +67,6 @@ set cino+=(0        " Aligns parentheses content on newline
 set cino+=N-s       " Prevents indentation within namespace
 set cinoptions+=g0  " Prevent access specifier indentation in C++ class
 
-set nowrap          " Don't break lines too long
-
 " Detects the opened file type and applies syntax highlighting etc..
 " accordingly
 filetype plugin on

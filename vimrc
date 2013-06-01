@@ -81,8 +81,8 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Disables arrow keys
-for prefix in ['i', 'n', 'v']
-    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-        exe prefix . "noremap " . key . " <Nop>"
-    endfor
-endfor
+"for prefix in ['i', 'n', 'v']
+"    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+"        exe prefix . "noremap " . key . " <Nop>"
+"    endfor
+"endfor

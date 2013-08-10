@@ -6,9 +6,12 @@ ZSH_THEME="sunrise"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump)
+plugins=(git virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
+
+# Tells virtualwrapper where is my virtualenv folder
+export WORKON_HOME=~/.virtualenvs/
 
 # Customize to your needs...
 export PATH=/usr/lib/colorgcc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games

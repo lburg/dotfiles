@@ -59,8 +59,8 @@ set autoindent      " Automatically indents on newline based on previous one
 set smartindent     " Indent automatically inside blocks
 set smarttab        " Use shiftwidth for the beginning of a line, (soft)tabstop otherwise
 set shiftwidth=4    " Space to insert at beginning of line
-set tabstop=2       " Space to insert..
-set softtabstop=2   " ..anywhere else
+set tabstop=4       " Space to insert..
+set softtabstop=4   " ..anywhere else
 set expandtab       " Use a number of space for tabs
 
 set cino+=(0        " Aligns parentheses content on newline
@@ -69,8 +69,9 @@ set cinoptions+=g0  " Prevent access specifier indentation in C++ class
 
 " Detects the opened file type and applies syntax highlighting etc..
 " accordingly
-filetype plugin on
-filetype indent on
+filetype on         " filetype detection
+filetype plugin on  " filetype specific plugins
+filetype indent on  " filetype indentation
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·

@@ -6,8 +6,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " ============== General ==============
-set autoread        " automatically reload changed files
-set number          " Show line numbers
+set autoread        " Automatically reload changed files
 set ruler           " Display line number, column number, etc.. of the cursor
 set history=1000    " Store up to a 1000 :cmd
 set showcmd         " Show incomplete command in the bottom right corner

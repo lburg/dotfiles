@@ -17,6 +17,7 @@ set hidden          " Do not write changes when changing buffers (and conserves 
 syntax on           " Syntax highlighting
 set encoding=utf8   " Set the encoding to utf-8
 set autochdir       " Changes directory when opening a file in a subdirectory
+set relativenumber  " Line number displayed are relative to the cursor position instead of absolute
 
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11

@@ -18,14 +18,25 @@ set encoding=utf8   " Set the encoding to utf-8
 set autochdir       " Changes directory when opening a file in a subdirectory
 set relativenumber  " Line number displayed are relative to the cursor position instead of absolute
 
+" Change the mapleader from '\' to ','
+let mapleader=","
+
+" Allow quick edit/reload of the .vimrc file
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" :diffthis shortcut
+nnoremap <leader>dt :diffthis<CR>
+nnoremap <leader>do :diffoff<CR>
+
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Make Y behave like C and D
-nmap Y y$
+nnoremap Y y$
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Highlights the currently selected line
 set cursorline
@@ -40,8 +51,8 @@ set incsearch                   " Incremental search
 set viminfo='100,f1             " Save up to 100 marks, enable capital marks
 
 " Centers the buffer on the next/previous item in a search
-nmap n nzz
-nmap N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 
 " Ignore search case, except if there is upper case characters in the search
 " pattern (/Foo will not find "foo", but /foo will find "foo" or "Foo")
@@ -87,3 +98,6 @@ set sidescroll=1
 "        exe prefix . "noremap " . key . " <Nop>"
 "    endfor
 "endfor
+
+" ============== Syntastic ============== 
+let g:syntastic_python_checkers=['pyflakes']

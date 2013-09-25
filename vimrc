@@ -29,6 +29,10 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>dt :diffthis<CR>
 nnoremap <leader>do :diffoff<CR>
 
+" j and k go up exactly one row, even if the line spans multiple rows
+nnoremap j gj
+nnoremap k gk
+
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
@@ -44,11 +48,11 @@ hi CursorLine   cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
 
 " ============== Search ============== 
-set wildmenu                    " Enable the search menu
-set wildmode=longest,list,full  " Bash like autocompletion on tab in the command line
-set wildignore=*.o,*~,*.pyc     " Files to ignore when searching
-set incsearch                   " Incremental search
-set viminfo='100,f1             " Save up to 100 marks, enable capital marks
+set wildmenu                                    " Enable the search menu
+set wildmode=longest,list,full                  " Bash like autocompletion on tab in the command line
+set wildignore+=*.o,*~,*.pyc,*.swp,*.so,*.out   " Files to ignore when searching
+set incsearch                                   " Incremental search
+set viminfo='100,f1                             " Save up to 100 marks, enable capital marks
 
 " Centers the buffer on the next/previous item in a search
 nnoremap n nzz

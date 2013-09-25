@@ -16,4 +16,9 @@ export WORKON_HOME=~/.virtualenvs/
 # Customize to your needs...
 export PATH=/usr/lib/colorgcc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
+# Aliases
 alias jb=jobs
+
+function git.send {
+  git push origin `git rev-parse --abbrev-ref HEAD` $1
+}

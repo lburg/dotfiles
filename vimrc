@@ -125,3 +125,6 @@ set sidescroll=1
 
 " ============== Syntastic ==============
 let g:syntastic_python_checkers=['pyflakes']
+
+" ============== Jedi VIM ==============
+let g:jedi#use_tabs_not_buffers = 0

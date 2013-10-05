@@ -6,8 +6,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " ============== General ==============
-set autoread        " automatically reload changed files
-set number          " Show line numbers
+set autoread        " Automatically reload changed files
 set ruler           " Display line number, column number, etc.. of the cursor
 set history=1000    " Store up to a 1000 :cmd
 set showcmd         " Show incomplete command in the bottom right corner
@@ -17,50 +16,82 @@ set hidden          " Do not write changes when changing buffers (and conserves 
 syntax on           " Syntax highlighting
 set encoding=utf8   " Set the encoding to utf-8
 set autochdir       " Changes directory when opening a file in a subdirectory
+set relativenumber  " Line number displayed are relative to the cursor position instead of absolute
+set title           " Change the terminal's title to show the focused opened file
+
+" Change the mapleader from '\' to ','
+let mapleader=","
+
+" Allow quick edit/reload of the .vimrc file
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Toggle paste mode
+set pastetoggle=<F2>
+
+" :diffthis shortcut
+nnoremap <leader>dt :diffthis<CR>
+nnoremap <leader>do :diffoff<CR>
+
+" j and k go up exactly one row, even if the line spans multiple rows
+nnoremap j gj
+nnoremap k gk
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Make Y behave like C and D
-nmap Y y$
+nnoremap Y y$
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Highlights the currently selected line
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
 
-" ============== Search ============== 
-set wildmenu                    " Enable the search menu
-set wildmode=longest,list,full  " Bash like autocompletion on tab in the command line
-set wildignore=*.o,*~,*.pyc     " Files to ignore when searching
-set incsearch                   " Incremental search
-set viminfo='100,f1             " Save up to 100 marks, enable capital marks
+" ============== Search ==============
+set wildmenu                                    " Enable the search menu
+set wildmode=longest,list,full                  " Bash like autocompletion on tab in the command line
+set wildignore+=*.o,*~,*.pyc,*.swp,*.so,*.out   " Files to ignore when searching
+set incsearch                                   " Incremental search
+set hlsearch                                    " Highlight search matches
+set viminfo='100,f1                             " Save up to 100 marks, enable capital marks
+
+" Quickly deactivates search highlighting
+nmap <silent> ,/ :nohlsearch<CR>
 
 " Centers the buffer on the next/previous item in a search
-nmap n nzz
-nmap N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 
 " Ignore search case, except if there is upper case characters in the search
 " pattern (/Foo will not find "foo", but /foo will find "foo" or "Foo")
 set ignorecase
 set smartcase
 
-" ============== Persistent Undo ============== 
+" ============== Persistent Undo ==============
 " Keep undo history across sessions, by storing in file.
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
 
-" ============== Indentation ============== 
+" ============== Formatting ===============
 set autoindent      " Automatically indents on newline based on previous one
+set copyindent      " Copy the previous indentation on autoindenting
 set smartindent     " Indent automatically inside blocks
 set smarttab        " Use shiftwidth for the beginning of a line, (soft)tabstop otherwise
 set shiftwidth=4    " Space to insert at beginning of line
-set tabstop=2       " Space to insert..
-set softtabstop=2   " ..anywhere else
+set shiftround      " Use multiple of shiftwidth when indenting with '<' or '>'
+set tabstop=4       " Space to insert..
+set softtabstop=4   " ..anywhere else
 set expandtab       " Use a number of space for tabs
 
 set cino+=(0        " Aligns parentheses content on newline
@@ -69,13 +100,18 @@ set cinoptions+=g0  " Prevent access specifier indentation in C++ class
 
 " Detects the opened file type and applies syntax highlighting etc..
 " accordingly
-filetype plugin on
-filetype indent on
+filetype on         " filetype detection
+filetype plugin on  " filetype specific plugins
+filetype indent on  " filetype indentation
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-" ============== Scrolling ============== 
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+" ============== Scrolling ==============
 set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
@@ -86,3 +122,9 @@ set sidescroll=1
 "        exe prefix . "noremap " . key . " <Nop>"
 "    endfor
 "endfor
+
+" ============== Syntastic ==============
+let g:syntastic_python_checkers=['pyflakes']
+
+" ============== Jedi VIM ==============
+let g:jedi#use_tabs_not_buffers = 0

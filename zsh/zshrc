@@ -16,3 +16,10 @@ export WORKON_HOME=~/.virtualenvs/
 # Customize to your needs...
 export PATH=/usr/lib/colorgcc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Aliases
+
+alias djangoshell="python manage.py shell"
+alias shellplus="python manage.py shell_plus --use-pythonrc"

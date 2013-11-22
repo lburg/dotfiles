@@ -25,6 +25,13 @@ alias djangoshell="python manage.py shell"
 alias shellplus="python manage.py shell_plus --use-pythonrc"
 alias jb=jobs
 
-function git.send {
+function git.send
+{
   git push origin `git rev-parse --abbrev-ref HEAD` $1
+}
+
+function cdl
+{
+    cd $1;
+    ls;
 }

@@ -46,6 +46,9 @@ map <C-l> <C-w>l
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
+" Map .md to markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " Make Y behave like C and D
 nnoremap Y y$
 
@@ -124,7 +127,8 @@ set sidescroll=1
 "endfor
 
 " ============== Syntastic ==============
-let g:syntastic_python_checkers=['pyflakes']
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E124,E128,F403,E501'
 
 " ============== Jedi VIM ==============
 let g:jedi#use_tabs_not_buffers = 0

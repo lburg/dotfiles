@@ -19,6 +19,13 @@ export PATH=/usr/lib/colorgcc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/
 # Aliases
 alias jb=jobs
 
-function git.send {
+function git.send
+{
   git push origin `git rev-parse --abbrev-ref HEAD` $1
+}
+
+function cdl
+{
+    cd $1;
+    ls;
 }

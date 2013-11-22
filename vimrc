@@ -13,11 +13,15 @@ set showcmd         " Show incomplete command in the bottom right corner
 set showmode        " Show current mode at the bottom
 set gcr=a:blinkon0  " Disable cursor blink
 set hidden          " Do not write changes when changing buffers (and conserves editing history)
-syntax on           " Syntax highlighting
+syntax enable       " Syntax highlighting
 set encoding=utf8   " Set the encoding to utf-8
 set autochdir       " Changes directory when opening a file in a subdirectory
 set relativenumber  " Line number displayed are relative to the cursor position instead of absolute
 set title           " Change the terminal's title to show the focused opened file
+set laststatus=2    " Always show the statusline
+
+" Macro to insert python debug line
+let @d = "Oimport ipdb; ipdb.set_trace(),w"
 
 " Change the mapleader from '\' to ','
 let mapleader=","
@@ -32,6 +36,10 @@ set pastetoggle=<F2>
 " :diffthis shortcut
 nnoremap <leader>dt :diffthis<CR>
 nnoremap <leader>do :diffoff<CR>
+
+" Toggle mouse
+nnoremap <leader>m  :set mouse=a<CR>
+nnoremap <leader>mo :set mouse=<CR>
 
 " j and k go up exactly one row, even if the line spans multiple rows
 nnoremap j gj
@@ -127,4 +135,7 @@ set sidescroll=1
 let g:syntastic_python_checkers=['pyflakes']
 
 " ============== Jedi VIM ==============
-let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#use_tabs_not_buffers = 0
+
+" ============== Powerline ==============
+"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/

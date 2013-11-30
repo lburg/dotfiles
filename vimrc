@@ -16,7 +16,7 @@ set hidden          " Do not write changes when changing buffers (and conserves 
 syntax enable       " Syntax highlighting
 set encoding=utf8   " Set the encoding to utf-8
 set autochdir       " Changes directory when opening a file in a subdirectory
-set relativenumber  " Line number displayed are relative to the cursor position instead of absolute
+set number          " Displays line numbers
 set title           " Change the terminal's title to show the focused opened file
 set laststatus=2    " Always show the statusline
 
@@ -64,9 +64,9 @@ nnoremap Y y$
 nnoremap <leader>w :w!<cr>
 
 " Highlights the currently selected line
-set cursorline
-hi CursorLine   cterm=NONE ctermbg=black
-hi CursorColumn cterm=NONE ctermbg=black
+"set cursorline
+"hi CursorLine   cterm=NONE ctermbg=black
+"hi CursorColumn cterm=NONE ctermbg=black
 
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu

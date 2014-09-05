@@ -30,6 +30,9 @@ let mapleader=","
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Prevents vim from unindenting the line if it starts with '#'
+inoremap # X#
+
 " Toggle paste mode
 set pastetoggle=<F2>
 
@@ -50,6 +53,15 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Auto resize of panels (thx tom_ahh)
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=10
+set winminheight=10
+set winheight=999
 
 " Map cpp file to cpp11
 au BufNewFile,BufRead *.cpp set syntax=cpp11
@@ -137,6 +149,8 @@ set sidescroll=1
 " ============== Syntastic ==============
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E124,E128,F403,E501'
+let g:syntastic_cpp_compiler='g++'
+let g:syntastic_cpp_compiler_options='-std=c++11'
 
 " ============== Jedi VIM ==============
 "let g:jedi#use_tabs_not_buffers = 0

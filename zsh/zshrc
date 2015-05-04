@@ -10,6 +10,9 @@ plugins=(git git-flow autojump virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
+# Enable emacs command line edition
+bindkey -e
+
 # Tells virtualwrapper where is my virtualenv folder
 export WORKON_HOME=~/.virtualenvs/
 

@@ -148,7 +148,7 @@ set sidescroll=1
 
 " ============== Syntastic ==============
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E124,E128,F403,E501'
+let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11'
 

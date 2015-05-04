@@ -1,0 +1,32 @@
+[color]
+    branch = auto
+    diff   = auto
+    status = auto
+	grep = always
+[alias]
+    st        = status
+    co        = checkout
+    br        = branch
+    ci        = commit
+    lg        = log --pretty=oneline --graph
+    logfull   = log --pretty=fuller --graph --stat -p
+    lga       = log --pretty=oneline --graph --all --decorate
+    unstage   = reset HEAD
+    # there should be an article on what this command do
+    uncommit = !zsh -c '"if (($0)); then nb=$(( $0 - 1 )); else nb=0; fi; i=0; while ((i<=nb)); do git revert -n --no-edit HEAD~$i; ((i++)); done; git commit -m \"revert to $0 version(s) back\""'
+    undomerge = reset --hard ORIG_HEAD
+    conflict  = !gitk --left-right HEAD...MERGE_HEAD
+    # under Mac OS X, you should use gitx instead
+    # conflict    = !gitx --left-right HEAD...MERGE_HEAD
+[branch]
+	autosetupmerge = true
+[user]
+	name = lburg
+	email = burg.lois@gmail.com
+[core]
+	pager = less -XFR
+	autoclrf = input
+[push]
+	default = current
+[grep]
+	lineNumber = true

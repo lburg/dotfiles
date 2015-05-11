@@ -1,9 +1,19 @@
 " Uses vim settings instead of vi
 set nocompatible
 
-" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" ============== Vundle ===============
+
+Bundle 'scrooloose/syntastic.git'
+Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'tpope/vim-repeat.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-unimpaired.git'
+
 
 " ============== General ==============
 set autoread        " Automatically reload changed files

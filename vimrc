@@ -8,11 +8,14 @@ call vundle#rc()
 
 " ============== Vundle ===============
 
-Bundle 'scrooloose/syntastic.git'
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-unimpaired.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'rbgrouleff/bclose.vim.git'
+Plugin 'wesQ3/vim-windowswap.git'
 
 
 " ============== General ==============

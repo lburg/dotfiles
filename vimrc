@@ -25,6 +25,7 @@ call ctrlp_bdelete#init()
 
 
 " ============== General ==============
+set background=dark " Dark solarized mode
 set autoread        " Automatically reload changed files
 set ruler           " Display line number, column number, etc.. of the cursor
 set history=1000    " Store up to a 1000 :cmd
@@ -38,6 +39,8 @@ set autochdir       " Changes directory when opening a file in a subdirectory
 set number          " Displays line numbers
 set title           " Change the terminal's title to show the focused opened file
 set laststatus=2    " Always show the statusline
+
+colorscheme solarized
 
 " Macro to insert python debug line
 let @d = "Oimport ipdb; ipdb.set_trace(),w"

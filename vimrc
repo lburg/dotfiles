@@ -55,16 +55,15 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 " Prevents vim from unindenting the line if it starts with '#'
 inoremap # X#
 
+" Prevent the command-line window from opening
+map q: :q
+
 " Toggle paste mode
 set pastetoggle=<F2>
 
 " :diffthis shortcut
 nnoremap <leader>dt :diffthis<CR>
 nnoremap <leader>do :diffoff<CR>
-
-" Toggle mouse
-nnoremap <leader>m  :set mouse=a<CR>
-nnoremap <leader>mo :set mouse=<CR>
 
 " j and k go up exactly one row, even if the line spans multiple rows
 nnoremap j gj
@@ -85,12 +84,6 @@ set winheight=10
 set winminheight=10
 set winheight=999
 
-" Map cpp file to cpp11
-au BufNewFile,BufRead *.cpp set syntax=cpp11
-
-" Map .md to markdown
-au BufRead,BufNewFile *.md set filetype=markdown
-
 " Make Y behave like C and D
 nnoremap Y y$
 
@@ -98,9 +91,22 @@ nnoremap Y y$
 nnoremap <leader>w :w!<cr>
 
 " Highlights the currently selected line
-"set cursorline
+set cursorline
 "hi CursorLine   cterm=NONE ctermbg=black
 "hi CursorColumn cterm=NONE ctermbg=black
+
+
+" ============== Syntax ==============
+
+" Map cpp file to cpp11
+au BufNewFile,BufRead *.cpp set syntax=cpp11
+
+" Map .md to markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" Map .yaml to vim-yaml
+au BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
+
 
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu

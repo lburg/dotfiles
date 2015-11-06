@@ -3,7 +3,7 @@
     branch = auto
     diff   = auto
     status = auto
-	grep = always
+    grep = always
 
 [color "branch"]
     current = yellow reverse
@@ -41,18 +41,18 @@
     conflict  = !gitk --left-right HEAD...MERGE_HEAD
 
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
 
 [user]
-	name = lburg
-	email = burg.lois@gmail.com
+    name = lburg
+    email = burg.lois@gmail.com
 
 [core]
-	pager = less -XFR
-	autoclrf = input
+    pager = less -XFR
+    autoclrf = input
 
 [push]
-	default = upstream
+    default = upstream
 
 [grep]
-	lineNumber = true
+    lineNumber = true

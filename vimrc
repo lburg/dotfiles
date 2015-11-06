@@ -3,19 +3,25 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " ============== Vundle ===============
 
-Plugin 'scrooloose/syntastic.git'
-Plugin 'altercation/vim-colors-solarized.git'
-Plugin 'tpope/vim-repeat.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-unimpaired.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'bling/vim-airline.git'
 Plugin 'rbgrouleff/bclose.vim.git'
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'd11wtq/ctrlp_bdelete.vim.git'
+Plugin 'myusuf3/numbers.vim.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'saltstack/salt-vim.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
+
+call ctrlp_bdelete#init()
 
 
 " ============== General ==============
@@ -161,9 +167,10 @@ set sidescroll=1
 
 " ============== Syntastic ==============
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501,E128'
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11'
+let g:syntastic_always_populate_loc_list=1
 
 " ============== Jedi VIM ==============
 "let g:jedi#use_tabs_not_buffers = 0

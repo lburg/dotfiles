@@ -44,6 +44,7 @@ colorscheme solarized
 
 " Macro to insert python debug line
 let @d = "Oimport ipdb; ipdb.set_trace(),w"
+let @e = "Oimport epdb; epdb.serve(port=5555),w"
 
 " Change the mapleader from '\' to ','
 let mapleader=","

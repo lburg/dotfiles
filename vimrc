@@ -91,6 +91,9 @@ nnoremap Y y$
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
+" Sudo write
+cmap w!! w !sudo tee % >/dev/null
+
 " Highlights the currently selected line
 set cursorline
 "hi CursorLine   cterm=NONE ctermbg=black

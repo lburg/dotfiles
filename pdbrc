@@ -1,0 +1,2 @@
+# Easily leave pdb when stuck on some frequent breakpoints
+alias kk import os; os._exit(1)

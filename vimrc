@@ -126,7 +126,7 @@ set hlsearch                                    " Highlight search matches
 set viminfo='100,f1                             " Save up to 100 marks, enable capital marks
 
 " Quickly deactivates search highlighting
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 " Centers the buffer on the next/previous item in a search
 nnoremap n nzz

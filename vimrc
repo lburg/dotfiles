@@ -184,16 +184,22 @@ set sidescroll=1
 "endfor
 
 " ============== Syntastic ==============
-let g:syntastic_pug_checkers=['pug_lint']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,E128'
-let g:syntastic_cpp_compiler='g++'
-let g:syntastic_cpp_compiler_options='-std=c++11'
+" Don't run on buffer changes
+let g:syntastic_mode_map={'mode': 'passive'}
+" Don't run on exit
+let g:syntastic_check_on_wq=0
+let g:syntastic_auto_loc_list=1
 let g:syntastic_always_populate_loc_list=1
 
-" ============== Jedi VIM ==============
-"let g:jedi#use_tabs_not_buffers = 0
+let g:syntastic_pug_checkers=['pug_lint']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_python_checkers=['pylint', 'flake8']
+let g:syntastic_python_flake8_args='--ignore=E128,W503 --max-line-length=120'
+let g:syntastic_cpp_compiler='g++'
+let g:syntastic_cpp_compiler_options='-std=c++11'
+
+" Shortcut to SyntasticCheck
+nnoremap <leader>sc :SyntasticCheck<cr>
 
 " ============== Powerline ==============
 "set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/

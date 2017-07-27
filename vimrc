@@ -201,6 +201,9 @@ let g:syntastic_cpp_compiler_options='-std=c++11'
 " Shortcut to SyntasticCheck
 nnoremap <leader>sc :SyntasticCheck<cr>
 
+" ================ CtrlP ================
+let g:ctrlp_custom_ignore='node_modules'
+
 " =============== Airline ===============
 
 let g:airline_powerline_fonts=1

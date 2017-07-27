@@ -8,16 +8,21 @@ call vundle#rc()
 
 " ============== Vundle ===============
 
-Plugin 'bling/vim-airline.git'
+Plugin 'gmarik/Vundle.vim'
+
 Plugin 'rbgrouleff/bclose.vim.git'
-Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'd11wtq/ctrlp_bdelete.vim.git'
 Plugin 'myusuf3/numbers.vim.git'
-Plugin 'tpope/vim-repeat.git'
 Plugin 'saltstack/salt-vim.git'
-Plugin 'tpope/vim-surround.git'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'vim-airline/vim-airline.git'
+Plugin 'vim-airline/vim-airline-themes.git'
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
 

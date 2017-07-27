@@ -201,5 +201,12 @@ let g:syntastic_cpp_compiler_options='-std=c++11'
 " Shortcut to SyntasticCheck
 nnoremap <leader>sc :SyntasticCheck<cr>
 
-" ============== Powerline ==============
-"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+" =============== Airline ===============
+
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"

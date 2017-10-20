@@ -41,6 +41,30 @@
     conflict  = !gitk --left-right HEAD...MERGE_HEAD
     commend = commit --amend --no-edit
 
+[alias]
+    etat = status
+    pousser = push
+    tirer = pull
+    commettre = commit
+    ranger = stash
+    ajouter = add
+    enlever = rm
+    cloner = clone
+    fusionner = merge
+    distant = remote
+    branche = branch
+    difference = diff
+    journal = log
+    cueillette = cherry-pick
+    configuration = config
+    nettoyer = clean
+    recuperer = fetch
+    etiquetter = tag
+    afficher = show
+    deplacer = mv
+    rabouter = rebase
+    denoncer = blame
+
 [branch]
     autosetupmerge = true
 

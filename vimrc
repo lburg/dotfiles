@@ -56,8 +56,8 @@ let @e = "Oimport epdb; epdb.serve(port=5555),w"
 let mapleader=","
 
 " Allow quick edit/reload of the .vimrc file
-nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :edit $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " Prevents vim from unindenting the line if it starts with '#'
 inoremap # X#

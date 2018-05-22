@@ -61,6 +61,11 @@ if v:version > 703 || v:version == 703 && has('patch541')
     set formatoptions+=j
 endif
 
+" Mark long lines as an error (more than 120 characters)
+match ErrorMsg '\%>120v.\+'
+" Mark trailing spaces as a error
+match ErrorMsg '\s\+$'
+
 " Macro to insert python debug line
 let @d = "Oimport ipdb; ipdb.set_trace(),w"
 let @e = "Oimport epdb; epdb.serve(port=5555),w"

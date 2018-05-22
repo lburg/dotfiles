@@ -56,6 +56,11 @@ set t_Co=16         " Use 16 colors (required for solarized to work well in tmux
 
 colorscheme solarized
 
+" Smartly join comment lines
+if v:version > 703 || v:version == 703 && has('patch541')
+    set formatoptions+=j
+endif
+
 " Macro to insert python debug line
 let @d = "Oimport ipdb; ipdb.set_trace(),w"
 let @e = "Oimport epdb; epdb.serve(port=5555),w"

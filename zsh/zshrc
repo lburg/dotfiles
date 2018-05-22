@@ -10,6 +10,8 @@ plugins=(git git-flow autojump virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=vim
+
 # Enable emacs command line edition
 bindkey -e
 

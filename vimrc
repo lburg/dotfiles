@@ -189,6 +189,8 @@ set list listchars=tab:\ \ ,trail:·
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
 nmap Q gqap
+" 120 characters max per line
+set textwidth=120
 
 " ============== Scrolling ==============
 set scrolloff=3

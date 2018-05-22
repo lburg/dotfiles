@@ -26,6 +26,14 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
 
+" Vim orgmode and dependencies/QoL
+Plugin 'jceb/vim-orgmode'
+Plugin 'vim-scripts/utl.vim'  " Hyperlinks support
+Plugin 'majutsushi/tagbar'  " Source code explorer, used for tags
+Plugin 'tpope/vim-speeddating'  " C-a/C-x dates
+Plugin 'mattn/calendar-vim'  " Calendar window for timestamp insertion
+Plugin 'vim-scripts/SyntaxRange'  " Allow for different syntax highlighting in a file
+
 call ctrlp_bdelete#init()
 
 
@@ -214,3 +222,8 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
+" =============== Vim-org ===============
+
+" Open hyperlinks using firefox
+let g:utl_cfg_hdl_scm_http_system = "silent !firefox -remote 'ping()' && firefox -remote 'openURL( %u )' || firefox '%u#%f' &"

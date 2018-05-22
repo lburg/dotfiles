@@ -38,6 +38,12 @@ export PATH="$PATH:$HOME/bin"
 # Term
 export TERM='xterm-256color'
 
+# History
+
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
 # Aliases
 
 alias djangoshell="python manage.py shell"

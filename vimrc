@@ -16,8 +16,7 @@ Plugin 'd11wtq/ctrlp_bdelete.vim.git'
 Plugin 'myusuf3/numbers.vim.git'
 Plugin 'saltstack/salt-vim.git'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'vim-airline/vim-airline.git'
-Plugin 'vim-airline/vim-airline-themes.git'
+Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
@@ -225,17 +224,12 @@ nnoremap <leader>sc :SyntasticCheck<cr>
 " ================ CtrlP ================
 let g:ctrlp_custom_ignore='node_modules'
 
-" =============== Airline ===============
-
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
 " =============== Vim-org ===============
 
 " Open hyperlinks using firefox
 let g:utl_cfg_hdl_scm_http_system = "silent !firefox -remote 'ping()' && firefox -remote 'openURL( %u )' || firefox '%u#%f' &"
+
+" =============== lightline ===============
+
+set noshowmode  " hide default mode information (i.e. -- INSERT --)
+let g:lightline = {'colorscheme': 'solarized'}

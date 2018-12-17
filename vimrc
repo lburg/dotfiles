@@ -236,6 +236,7 @@ let g:syntastic_yaml_checkers=['yamllint']
 nnoremap <leader>sc :SyntasticCheck<cr>
 
 " ================ CtrlP ================
+let g:ctrlp_cmd='CtrlPBuffer'
 let g:ctrlp_custom_ignore='node_modules'
 
 " =============== Vim-org ===============

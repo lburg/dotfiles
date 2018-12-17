@@ -40,6 +40,7 @@
     undomerge = reset --hard ORIG_HEAD
     conflict  = !gitk --left-right HEAD...MERGE_HEAD
     commend = commit --amend --no-edit
+    pfwl    = push --force-with-lease
 
 [alias]
     etat = status
@@ -64,6 +65,8 @@
     deplacer = mv
     rabouter = rebase
     denoncer = blame
+    stapo = blame
+    inverser = revert
 
 [branch]
     autosetupmerge = true

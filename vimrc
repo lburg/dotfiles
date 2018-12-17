@@ -217,6 +217,7 @@ let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--ignore=E128,W503 --max-line-length=120'
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11'
+let g:syntastic_yaml_checkers=['yamllint']
 
 " Shortcut to SyntasticCheck
 nnoremap <leader>sc :SyntasticCheck<cr>

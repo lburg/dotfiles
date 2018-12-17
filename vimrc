@@ -55,7 +55,7 @@ set t_Co=16         " Use 16 colors (required for solarized to work well in tmux
 
 colorscheme solarized
 
-" Smartly join comment lines
+" Smartly join comments lines
 if v:version > 703 || v:version == 703 && has('patch541')
     set formatoptions+=j
 endif
@@ -78,6 +78,19 @@ nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " Prevents vim from unindenting the line if it starts with '#'
 inoremap # X#
+
+" Make EMACS-like shortcuts available in vim commandline
+cnoremap <C-a>  <Home>
+cnoremap <C-b>  <Left>
+cnoremap <C-f>  <Right>
+cnoremap <C-d>  <Delete>
+cnoremap <M-b>  <S-Left>
+cnoremap <M-f>  <S-Right>
+cnoremap <M-d>  <S-right><Delete>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+cnoremap <Esc>d <S-right><Delete>
+cnoremap <C-g>  <C-c>
 
 " Prevent the command-line window from opening
 map q: :q

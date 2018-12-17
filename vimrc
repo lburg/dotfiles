@@ -11,7 +11,7 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'rbgrouleff/bclose.vim.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'd11wtq/ctrlp_bdelete.vim.git'
 Plugin 'myusuf3/numbers.vim.git'
 Plugin 'saltstack/salt-vim.git'

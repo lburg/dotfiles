@@ -51,8 +51,9 @@ set autochdir       " Changes directory when opening a file in a subdirectory
 set number          " Displays line numbers
 set title           " Change the terminal's title to show the focused opened file
 set laststatus=2    " Always show the statusline
-set t_Co=16         " Use 16 colors (required for solarized to work well in tmux)
 
+set t_Co=16         " Use 16 colors (required for solarized to work well in tmux)
+let g:solarized_termcolors = 16 " Not sure if this is required, but I keep it to know it exists
 colorscheme solarized
 
 " Smartly join comments lines

@@ -15,7 +15,6 @@ Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'd11wtq/ctrlp_bdelete.vim.git'
 Plugin 'myusuf3/numbers.vim.git'
 Plugin 'saltstack/salt-vim.git'
-Plugin 'scrooloose/syntastic.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'tpope/vim-abolish'
@@ -24,6 +23,7 @@ Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
+Plugin 'w0rp/ale'
 
 " Vim orgmode and dependencies/QoL
 Plugin 'jceb/vim-orgmode'
@@ -217,24 +217,28 @@ set sidescroll=1
 "    endfor
 "endfor
 
-" ============== Syntastic ==============
-" Don't run on buffer changes
-let g:syntastic_mode_map={'mode': 'passive'}
-" Don't run on exit
-let g:syntastic_check_on_wq=0
-let g:syntastic_auto_loc_list=1
-let g:syntastic_always_populate_loc_list=1
+" ================= ALE =================
 
-let g:syntastic_pug_checkers=['pug_lint']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_python_checkers=['pylint', 'flake8']
-let g:syntastic_python_flake8_args='--ignore=E128,W503 --max-line-length=120'
-let g:syntastic_cpp_compiler='g++'
-let g:syntastic_cpp_compiler_options='-std=c++11'
-let g:syntastic_yaml_checkers=['yamllint']
+let g:ale_lint_on_save=1
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_enter=0
 
-" Shortcut to SyntasticCheck
-nnoremap <leader>sc :SyntasticCheck<cr>
+let g:ale_sign_error='⊘'
+let g:ale_sign_warning='⚠'
+
+let g:ale_echo_msg_info_str='I'
+let g:ale_echo_msg_warning_str='W'
+let g:ale_echo_msg_error_str='E'
+let g:ale_echo_msg_format='[%linter%] %code%: %s [%severity%]'
+
+let g:ale_linters={
+\   'javascript': ['eslint'],
+\   'pug': ['puglint'],
+\   'python': ['flake8', 'pylint'],
+\   'yaml': ['yamllint'],
+\}
+
+let g:ale_python_flake8_options='--ignore=E128,W503 --max-line-length=120'
 
 " ================ CtrlP ================
 let g:ctrlp_cmd='CtrlPBuffer'

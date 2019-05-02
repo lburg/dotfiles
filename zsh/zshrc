@@ -5,10 +5,13 @@ ZSH_THEME="sunrise"
 
 eval `dircolors ~/.dir_colors/solarized_dark`
 
+# Path for fzf plugin to find fzf binary
+export FZF_BASE=/usr/share/fzf
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow autojump virtualenvwrapper)
+plugins=(git git-flow autojump virtualenvwrapper fzf)
 
 source $ZSH/oh-my-zsh.sh
 

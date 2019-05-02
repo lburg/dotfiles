@@ -11,7 +11,7 @@ export FZF_BASE=/usr/share/fzf
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow virtualenvwrapper fzf)
+plugins=(git git-flow virtualenvwrapper fancy-ctrl-z fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,15 +67,3 @@ function cdl
     ls;
 }
 
-# Ctrl-Z swaps between foreground and background
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z

@@ -37,7 +37,7 @@
     commend = commit --amend --no-edit
     pfwl    = push --force-with-lease
 
-[alias]
+[alias]  # mostly a joke
     etat = status
     pousser = push
     tirer = pull
@@ -68,7 +68,7 @@
 
 [user]
     name = Loïs Burg
-    email = burg.lois@gmail.com
+    email = lois.burg@protonmail.com
 
 [core]
     pager = less -XFR

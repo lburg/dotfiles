@@ -25,6 +25,9 @@ Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
 Plugin 'w0rp/ale'
 
+" Syntax plugins
+Plugin 'lepture/vim-jinja'
+
 " Vim orgmode and dependencies/QoL
 Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/utl.vim'  " Hyperlinks support
@@ -148,6 +151,8 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Map .yaml to vim-yaml
 au BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
 
+" Map HTML to jinja syntax
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu

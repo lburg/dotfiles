@@ -26,7 +26,7 @@ Plugin 'wesQ3/vim-windowswap.git'
 Plugin 'w0rp/ale'
 
 " Syntax plugins
-Plugin 'lepture/vim-jinja'
+Plugin 'sheerun/vim-polyglot'  " Collection of syntax highlighting plugins
 
 " Vim orgmode and dependencies/QoL
 Plugin 'jceb/vim-orgmode'

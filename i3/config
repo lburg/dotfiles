@@ -156,4 +156,4 @@ bindsym Ctrl+q exec /home/lburg/.i3/noctrlq.sh
 for_window [class="^.*"] border pixel 0
 
 # Launch polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.polybar/launch.sh

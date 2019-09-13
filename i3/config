@@ -155,18 +155,5 @@ bindsym Ctrl+q exec /home/lburg/.i3/noctrlq.sh
 # Disable window titlebars (required by i3-gaps)
 for_window [class="^.*"] border pixel 0
 
-# Bar conf
-bar {
-    # Start i3bar to display a workspace bar (plus the system information i3status
-    # finds out, if available)
-    status_command /home/lburg/.i3/statusbar.sh
-
-    # reflex blue:  #0055A4
-    # safe white:   #FFFFFF
-    # red 032:      #EF4135
-    # colors {
-    #     background #0055A4
-    #     statusline #FFFFFF
-    #     separator #EF4135
-    # }
-}
+# Launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

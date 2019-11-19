@@ -7,3 +7,6 @@ alias ping="prettyping --nolegend"
 # Django
 alias djangoshell="python manage.py shell"
 alias shellplus="python manage.py shell_plus --use-pythonrc"
+
+# Python
+alias pip="python -m pip"

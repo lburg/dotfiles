@@ -20,3 +20,6 @@ function nvminit
 {
     source /usr/share/nvm/init-nvm.sh;
 }
+
+# Shitty 26 VPN
+alias reupvpn="sudo ipsec restart; sleep 1; sudo ipsec up bluevpn"

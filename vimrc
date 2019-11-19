@@ -136,6 +136,8 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Highlights the currently selected line
 set cursorline
+" Disable underlining the cursor line number
+highlight CursorLineNr cterm=NONE
 "hi CursorLine   cterm=NONE ctermbg=black
 "hi CursorColumn cterm=NONE ctermbg=black
 

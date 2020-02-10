@@ -1,9 +1,6 @@
 plugins=(kubectl $plugins)
 
-# 'load_dump' function
-source $HOME/.zsh_functions/pg_restore_dump.sh
-
-# git-repo
+# git-repo and others
 export PATH="$PATH:$HOME/bin"
 
 # Required to build polysonar

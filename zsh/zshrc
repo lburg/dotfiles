@@ -15,10 +15,6 @@ plugins=(git git-flow virtualenvwrapper fancy-ctrl-z fzf)
 
 source $ZSH/oh-my-zsh.sh
 
-# Initialize autocompletion with extra functions
-fpath=(~/.zsh_functions/completions $fpath)
-autoload -U compinit && compinit
-
 # Enable emacs command line edition
 bindkey -e
 

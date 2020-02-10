@@ -73,6 +73,7 @@
 [core]
     pager = less -XFR
     autoclrf = input
+    excludesfile = ~/.gitignore
 
 [push]
     default = upstream

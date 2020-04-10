@@ -37,5 +37,11 @@ fi
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
 
+# add 'env PYTHON_CONFIGURE_OPTS="--enable-framework"' so that 'pyenv install' installs shared libraries
+
 # poetry
 export PATH=$HOME/.poetry/bin:$PATH
+
+# Created by `userpath` on 2019-12-16 14:40:57
+export PATH="$PATH:/home/lburg/.local/bin"
+eval "$(register-python-argcomplete pipx)"

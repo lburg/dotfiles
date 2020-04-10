@@ -76,6 +76,7 @@ match ErrorMsg '\s\+$'
 " Macro to insert python debug line
 let @d = "Oimport ipdb; ipdb.set_trace(),w"
 let @e = "Oimport epdb; epdb.serve(port=5555),w"
+let @t = "Oimport traceback; print(traceback.print_stack()),w"
 
 " Change the mapleader from '\' to ','
 let mapleader=","
@@ -149,13 +150,13 @@ highlight CursorLineNr cterm=NONE
 " ============== Syntax ==============
 
 " Map cpp file to cpp11
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+" autocmd BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Map .md to markdown
-au BufRead,BufNewFile *.md set filetype=markdown
+" autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " Map .yaml to vim-yaml
-au BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
+" autocmd BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
 
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu
@@ -248,11 +249,15 @@ let g:ale_echo_msg_format='[%linter%] %code%: %s [%severity%]'
 let g:ale_linters={
 \   'javascript': ['eslint'],
 \   'pug': ['puglint'],
-\   'python': ['flake8', 'pylint'],
+\   'python': ['pylint', 'flake8', 'mypy'],
 \   'yaml': ['yamllint'],
 \}
 
-let g:ale_python_flake8_options='--ignore=E128,W503 --max-line-length=120'
+let g:ale_javascript_eslint_executable='PATH=./node_modules/.bin eslint'
+let g:ale_javascript_eslint_options='--config ./node_modules/systematic/.eslintrc'
+
+let g:ale_python_pylint_options='--rcfile=`dev-config-path .pylintrc`'
+let g:ale_python_flake8_options='--ignore=E128,W503,F841 --max-line-length=120'
 
 " Quickly jump between errors/warnings
 nmap <silent> [w <Plug>(ale_previous_wrap)

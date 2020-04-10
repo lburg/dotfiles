@@ -90,3 +90,9 @@
 
 [commit]
     verbose = true
+
+# Shows content of vaulted files (requires a .gitattributes configuration in the repository too,
+# lookup "diff=ansible-vault merge=binary")
+[diff "ansible-vault"]
+    cachetextconv = false
+    textconv = "ansible-vault view"

@@ -178,9 +178,15 @@ set smartcase
 
 " ============== Persistent Undo ==============
 " Keep undo history across sessions, by storing in file.
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
+silent !mkdir ~/.vim/undos > /dev/null 2>&1
+set undodir=~/.vim/undos
 set undofile
+
+" ============== Backups ==============
+" Save backups in a decicated folder, to reduce risks of deleting the source file along with its backups
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set backupdir=~/.vim/backups//,.
+set backup
 
 " ============== Formatting ===============
 set autoindent      " Automatically indents on newline based on previous one

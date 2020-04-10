@@ -274,7 +274,7 @@ nmap <F8> :TagbarToggle<CR>
 " =============== lightline ===============
 
 set noshowmode  " hide default mode information (i.e. -- INSERT --)
-let g:lightline = {'colorscheme': 'solarized'}
+let g:lightline = {'colorscheme': 'Tomorrow_Night_Bright'}
 
 " ============= lightline ALE =============
 

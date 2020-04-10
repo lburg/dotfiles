@@ -199,6 +199,9 @@ set tabstop=4       " Space to insert..
 set softtabstop=4   " ..anywhere else
 set expandtab       " Use a number of space for tabs
 
+" Frontend specific
+autocmd FileType html,css,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 set cino+=(0        " Aligns parentheses content on newline
 set cino+=N-s       " Prevents indentation within namespace
 set cinoptions+=g0  " Prevent access specifier indentation in C++ class

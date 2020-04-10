@@ -25,6 +25,7 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'wesQ3/vim-windowswap.git'
 Plugin 'w0rp/ale'
+Plugin 'maximbaz/lightline-ale'
 
 " Syntax plugins
 Plugin 'sheerun/vim-polyglot'  " Collection of syntax highlighting plugins
@@ -274,3 +275,23 @@ nmap <F8> :TagbarToggle<CR>
 
 set noshowmode  " hide default mode information (i.e. -- INSERT --)
 let g:lightline = {'colorscheme': 'solarized'}
+
+" ============= lightline ALE =============
+
+let g:lightline.component_expand={
+\   'linter_checking': 'lightline#ale#checking',
+\   'linter_warnings': 'lightline#ale#warnings',
+\   'linter_errors': 'lightline#ale#errors',
+\   'linter_ok': 'lightline#ale#ok',
+\}
+
+let g:lightline.component_type={
+\   'linter_checking': 'left',
+\   'linter_warnings': 'warning',
+\   'linter_errors': 'error',
+\   'linter_ok': 'left',
+\}
+
+let g:lightline.active={
+\   'right': [['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']],
+\}

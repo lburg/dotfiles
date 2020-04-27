@@ -36,6 +36,7 @@
     latest    = for-each-ref --sort=-taggerdate --format='%(refname:short)' --count=1
     commend = commit --amend --no-edit
     pfwl    = push --force-with-lease
+    sw      = switch
 
 [alias]  # mostly a joke
     etat = status

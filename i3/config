@@ -142,7 +142,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Lock screen
-bindsym $mod+Shift+BackSpace exec /home/lburg/.i3/i3lock-dpms --ignore-empty-password --color=000000
+bindsym $mod+Shift+BackSpace exec /home/lburg/.i3/i3lock-dpms --ignore-empty-password
 
 # Adjust volume
 bindcode 121 exec amixer set Master toggle

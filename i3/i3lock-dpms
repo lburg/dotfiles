@@ -1,8 +1,37 @@
 #!/bin/sh
+GREEN='#7ba23f'
+GREENHL='#86c166'
+BLUE='#33a6b8'
+BLUEHL='#81c7d4'
+RED='#db4d6d'
+REDHL='#d0104c'
+BLACK='#1c1c1c'
+WHITE='#dac9a6'
+
 revert() {
       xset dpms 0 0 0
 }
 trap revert HUP INT TERM
 xset +dpms dpms 5 5 5
-i3lock -n $@
+i3lock --nofork \
+    --color=$BLACK \
+    --insidecolor=$BLACK \
+    --linecolor=$BLACK \
+    --separatorcolor=$BLACK \
+    \
+    --ringcolor=$GREEN \
+    --keyhlcolor=$GREENHL \
+    \
+    --bshlcolor=$RED \
+    --insidewrongcolor=$REDHL \
+    --ringwrongcolor=$RED \
+    \
+    --ringvercolor=$BLUEHL \
+    --insidevercolor=$BLUE \
+    \
+    --clock \
+    --datecolor=$WHITE \
+    --timecolor=$WHITE \
+    \
+    $@
 revert

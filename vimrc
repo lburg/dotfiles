@@ -259,8 +259,8 @@ let g:ale_linters={
 let g:ale_python_flake8_options='--ignore=E128,W503 --max-line-length=120'
 
 " Quickly jump between errors/warnings
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> [w <Plug>(ale_previous_wrap)
+nmap <silent> ]w <Plug>(ale_next_wrap)
 
 " ================ CtrlP ================
 let g:ctrlp_cmd='CtrlPBuffer'

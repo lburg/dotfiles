@@ -320,3 +320,11 @@ let g:lightline.inactive = {
 \       [ 'percent' ],
 \   ],
 \}
+
+" Remove close button from tabline right side
+let g:lightline.tabline = {
+\   'left': [
+\       [ 'tabs' ],
+\   ],
+\   'right': [],
+\}

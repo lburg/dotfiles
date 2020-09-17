@@ -1,4 +1,5 @@
 #!/bin/sh
+# Colors taken from nipponcolors.com
 GREEN='#7ba23f'
 GREENHL='#86c166'
 BLUE='#33a6b8'

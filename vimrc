@@ -19,6 +19,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/gv.vim'  " git commit browser, requires vim-fugitive
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'

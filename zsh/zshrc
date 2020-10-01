@@ -10,6 +10,7 @@ eval `dircolors ~/.dir_colors/solarized_dark`
 
 # Path for fzf plugin to find fzf binary
 export FZF_BASE=/usr/share/fzf
+export FZF_CTRL_R_OPTS='--reverse'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/

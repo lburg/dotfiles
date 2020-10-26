@@ -20,3 +20,9 @@ function nvminit
 
 # Shitty 26 VPN
 alias reupvpn="sudo ipsec restart; sleep 1; sudo ipsec up bluevpn"
+
+# Postgresql
+export PGUSER=postgres
+export PGHOST=localhost
+export PGPORT=5432
+docker start postgres-local > /dev/null

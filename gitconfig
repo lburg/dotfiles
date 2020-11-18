@@ -3,7 +3,7 @@
     branch = auto
     diff   = auto
     status = auto
-    grep = always
+    grep = auto
 
 [color "branch"]
     current = yellow reverse

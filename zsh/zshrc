@@ -24,7 +24,7 @@ autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
 # Enable emacs command line edition
-bindkey -e
+bindkey -e  # vim doesn't handle ctrl-z properly
 
 # pyenv (oh-my-zsh plugin doesn't seem to load virtualenv correctly)
 export PYENV_ROOT=$HOME/.pyenv

@@ -1,0 +1,12 @@
+# Configure qwerty, azerty and bépo, toggle with alt+caps, use caps as escape
+setxkbmap -layout us,fr -option grp:win_space_toggle -option caps:escape
+# setxkbmap -layout us,fr,fr -variant ,,bepo -option grp:alt_caps_toggle -option caps:escape
+
+# Copy copied text between PRIMARY/CLIPBOARD buffers
+autocutsel &
+compton -b --no-fading-openclose
+xscreensaver -no-splash &
+eval $(ssh-agent)
+sh ~/.fehbg &
+
+light-locker &

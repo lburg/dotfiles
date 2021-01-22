@@ -157,9 +157,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Map .yaml to vim-yaml
 au BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
 
-" Map HTML to jinja syntax
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
-
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu
 set wildmode=longest,list,full                  " Bash like autocompletion on tab in the command line
@@ -202,9 +199,6 @@ set shiftround      " Use multiple of shiftwidth when indenting with '<' or '>'
 set tabstop=4       " Space to insert..
 set softtabstop=4   " ..anywhere else
 set expandtab       " Use a number of space for tabs
-
-" Frontend specific
-autocmd FileType html,css,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set cino+=(0        " Aligns parentheses content on newline
 set cino+=N-s       " Prevents indentation within namespace

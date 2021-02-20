@@ -8,7 +8,7 @@ call vundle#rc()
 
 " ============== Vundle ===============
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'ctrlpvim/ctrlp.vim.git'

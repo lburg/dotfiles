@@ -5,8 +5,7 @@ ZSH_THEME="sunrise"
 # Customize to your needs...
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/colorgcc/bin
 
-# 'ls' relies on this for colors, as well as some other commands
-eval `dircolors ~/.dir_colors/solarized_dark`
+eval `dircolors ~/.dir_colors/gruvbox-dark`
 
 # Path for fzf plugin to find fzf binary
 export FZF_BASE=/usr/share/fzf

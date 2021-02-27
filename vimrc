@@ -16,7 +16,9 @@ Plugin 'd11wtq/ctrlp_bdelete.vim.git'
 Plugin 'myusuf3/numbers.vim.git'
 Plugin 'saltstack/salt-vim.git'
 Plugin 'itchyny/lightline.vim'
-Plugin 'altercation/vim-colors-solarized.git'
+" Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'morhetz/gruvbox'
+Plugin 'shinchu/lightline-gruvbox.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
@@ -44,7 +46,7 @@ call ctrlp_bdelete#init()
 
 
 " ============== General ==============
-set background=dark " Dark solarized mode
+set background=dark " Dark mode
 set autoread        " Automatically reload changed files
 set ruler           " Display line number, column number, etc.. of the cursor
 set history=1000    " Store up to a 1000 :cmd
@@ -59,9 +61,9 @@ set number          " Displays line numbers
 set title           " Change the terminal's title to show the focused opened file
 set laststatus=2    " Always show the statusline
 
-set t_Co=16         " Use 16 colors (required for solarized to work well in tmux)
-let g:solarized_termcolors = 16 " Not sure if this is required, but I keep it to know it exists
-colorscheme solarized
+" set t_Co=16         " Use 16 colors (required for solarized to work well in tmux)
+" let g:solarized_termcolors = 16 " Not sure if this is required, but I keep it to know it exists
+colorscheme gruvbox
 
 " Smartly join comments lines
 if v:version > 703 || v:version == 703 && has('patch541')
@@ -275,7 +277,7 @@ nmap <F8> :TagbarToggle<CR>
 
 set noshowmode  " hide default mode information (i.e. -- INSERT --)
 let g:lightline = {
-\   'colorscheme': 'solarized',
+\   'colorscheme': 'gruvbox',
 \}
 
 " ============= lightline ALE =============

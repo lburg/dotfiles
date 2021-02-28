@@ -5,5 +5,8 @@ eval `ssh-agent -s`
 # Setup wallpaper
 ~/.fehbg &
 
+# Run light-locker to enabled locking screen with light-locker-command
+light-locker &
+
 # Run desktop manager
 exec i3

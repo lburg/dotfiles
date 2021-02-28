@@ -1,0 +1,39 @@
+configuration {
+    modi: "drun";
+    font: "Hack Nerd Font 13";
+    terminal: "kitty";
+    disable-history: true;
+    display-drun: "";  /* textbox label */
+    hide-scrollbar: true;
+}
+
+* {
+    bg: #282828;  /* gruvbox bg */
+    fg: #ebdbb2;  /* gruvbox fg */
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    padding: 10px 25px 25px 25px; /* top, right, bottom, left */
+    background-color: @bg;
+    border-color: @fg;
+    border: 1px;
+    width: 30%;
+}
+
+prompt, entry {
+    text-color: @fg;
+    padding: 5px;
+}
+
+element {
+    padding: 3px;
+}
+
+element selected {
+    background-color: @fg;
+    text-color: @bg;
+}
+
+// vim: set ft=css :

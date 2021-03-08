@@ -157,3 +157,8 @@ for_window [class="^.*"] border pixel 0
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.polybar/launch.sh
+
+# Launch kitti3. It's necesary to access it first using the $mod+n binding, but then the scratchpad binding can be used
+# ($mod+minus)
+exec_always --no-startup-id kitti3
+bindsym $mod+n nop kitti3

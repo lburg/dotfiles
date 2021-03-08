@@ -18,9 +18,12 @@ plugins=(django kubectl fancy-ctrl-z fzf git git-flow poetry virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
-# Initialize autocompletion with extra functions
-autoload -U compinit && compinit
+# Initialize autocompletion with extra functions (man zshbuiltins for options)
+autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
+
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 
 # Enable emacs command line edition
 bindkey -e  # vim doesn't handle ctrl-z properly

@@ -10,3 +10,6 @@ alias shellplus="python manage.py shell_plus --use-pythonrc"
 
 # Python
 alias pip="python -m pip"
+
+# Kitty
+alias icat="kitty +kitten icat"

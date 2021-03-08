@@ -30,6 +30,7 @@ Plugin 'wesQ3/vim-windowswap.git'
 Plugin 'w0rp/ale'
 Plugin 'maximbaz/lightline-ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-test/vim-test'
 
 " Syntax plugins
 Plugin 'sheerun/vim-polyglot'  " Collection of syntax highlighting plugins
@@ -336,3 +337,11 @@ let g:gitgutter_sign_removed = '⚫'
 let g:gitgutter_sign_removed_first_line = '⚫'
 let g:gitgutter_sign_removed_above_and_below = '⚫'
 let g:gitgutter_sign_modified_removed = '⚫'
+
+" ============= vim test =============
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>

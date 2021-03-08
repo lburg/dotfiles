@@ -15,3 +15,5 @@ export EDITOR=vim
 export GIT_EDITOR='vim'
 # Configure virtualenvwrapper folder
 export WORKON_HOME=~/.virtualenvs/
+# Required by vim-test pluging to run test in kitty terminal
+export KITTY_LISTEN_ON=unix:/tmp/mykitty-$PPID

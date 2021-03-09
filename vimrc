@@ -20,6 +20,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'shinchu/lightline-gruvbox.vim'
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tartansandal/vim-compiler-pytest'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/gv.vim'  " git commit browser, requires vim-fugitive
@@ -339,6 +341,8 @@ let g:gitgutter_sign_removed_above_and_below = '⚫'
 let g:gitgutter_sign_modified_removed = '⚫'
 
 " ============= vim test =============
+
+let test#strategy = "dispatch"
 
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>

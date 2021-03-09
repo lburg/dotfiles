@@ -162,6 +162,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Map .yaml to vim-yaml
 au BufNewFile,BufRead *.yaml,*.yml set syntax=yaml
 
+" Run prettier when formatting TypeScript
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
 " ============== Search ==============
 set wildmenu                                    " Enable the search menu
 set wildmode=longest,list,full                  " Bash like autocompletion on tab in the command line

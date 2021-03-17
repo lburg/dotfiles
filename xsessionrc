@@ -2,6 +2,8 @@
 # Launch SSH agent to enable usage of ssh-add
 eval `ssh-agent -s`
 
+setxkbmap -layout us,fr -option grp:win_space_toggle -option caps:escape
+
 # Setup wallpaper
 ~/.fehbg &
 

@@ -34,7 +34,6 @@ Plugin 'w0rp/ale'
 Plugin 'maximbaz/lightline-ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-test/vim-test'
-Plugin 'knubie/vim-kitty-navigator'
 
 " Language plugins
 Plugin 'sheerun/vim-polyglot'  " Collection of syntax highlighting plugins

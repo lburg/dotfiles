@@ -139,6 +139,9 @@ set winheight=999
 " Make Y behave like C and D
 nnoremap Y y$
 
+" Reselect pasted text
+nnoremap gp `[v`]
+
 " Fast saving
 nnoremap <leader>w :w!<cr>
 

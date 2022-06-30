@@ -74,7 +74,7 @@
 [core]
     pager = less -XFR
     autoclrf = input
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
 
 [push]
     default = upstream

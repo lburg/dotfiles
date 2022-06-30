@@ -127,6 +127,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Split below and to the right
+set splitbelow
+set splitright
+
 " Auto resize of panels (thx tom_ahh)
 set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
@@ -186,6 +190,9 @@ nnoremap N Nzz
 " pattern (/Foo will not find "foo", but /foo will find "foo" or "Foo")
 set ignorecase
 set smartcase
+
+" git-grep word under cursor
+nnoremap <leader>G :Ggr <cword><CR>
 
 " ============== Persistent Undo ==============
 " Keep undo history across sessions, by storing in file.
@@ -338,12 +345,12 @@ let g:lightline.tabline = {
 " ============= git gutter =============
 
 set signcolumn=yes  " always show gutter
-let g:gitgutter_sign_added = '⚫'
-let g:gitgutter_sign_modified = '⚫'
-let g:gitgutter_sign_removed = '⚫'
-let g:gitgutter_sign_removed_first_line = '⚫'
-let g:gitgutter_sign_removed_above_and_below = '⚫'
-let g:gitgutter_sign_modified_removed = '⚫'
+let g:gitgutter_sign_added = '●'
+let g:gitgutter_sign_modified = '●'
+let g:gitgutter_sign_removed = '●'
+let g:gitgutter_sign_removed_first_line = '●'
+let g:gitgutter_sign_removed_above_and_below = '●'
+let g:gitgutter_sign_modified_removed = '●'
 
 " ============= vim test =============
 

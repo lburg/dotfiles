@@ -14,7 +14,7 @@ export FZF_CTRL_R_OPTS='--reverse'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(django kubectl fancy-ctrl-z fzf git git-flow poetry virtualenvwrapper)
+plugins=(kubectl fancy-ctrl-z fzf git git-flow poetry virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 

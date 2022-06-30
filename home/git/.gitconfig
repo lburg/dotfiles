@@ -37,39 +37,13 @@
     commend = commit --amend --no-edit
     pfwl    = push --force-with-lease
     sw      = switch
-
-[alias]  # mostly a joke
-    etat = status
-    pousser = push
-    tirer = pull
-    commettre = commit
-    ranger = stash
-    ajouter = add
-    enlever = rm
-    cloner = clone
-    fusionner = merge
-    distant = remote
-    branche = branch
-    difference = diff
-    journal = log
-    cueillette = cherry-pick
-    configuration = config
-    nettoyer = clean
-    recuperer = fetch
-    etiquetter = tag
-    afficher = show
-    deplacer = mv
-    rabouter = rebase
-    denoncer = blame
-    stapo = blame
-    inverser = revert
+    # Top 10 contributors on a file
+    top10   = ! git log --pretty=format: --name-only | grep -v '^$' | sort | uniq -c | sort -rg | head -10
+    # Commits affecting a file
+    his     = log --follow --color=always --date=format:'%Y-%m-%d' --pretty=format:'(%Cgreen%h%Creset)[%ad] %s'
 
 [branch]
     autosetupmerge = true
-
-[user]
-    name = Loïs Burg
-    email = lois.burg@protonmail.com
 
 [core]
     pager = less -XFR
@@ -97,3 +71,7 @@
 [diff "ansible-vault"]
     cachetextconv = false
     textconv = "ansible-vault view"
+
+# local config
+[include]
+    path = ~/.gitconfig_local

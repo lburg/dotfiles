@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pip install ipython ipdb rich icecream flake8 pylint mypy watchpoints
